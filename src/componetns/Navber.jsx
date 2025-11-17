@@ -1,5 +1,5 @@
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png';
 
 const Navber = () => {
@@ -14,18 +14,18 @@ const Navber = () => {
                     <ul
                         tabIndex="-1"
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li className='font-medium text-gray-500'><Link to='/'>Home</Link></li>
-                        <li className='font-medium text-gray-500'><Link to='/apps'>Apps</Link></li>
-                        <li className='font-medium text-gray-500'><Link to='/installation'>Installation</Link></li>
+                        <li className='font-medium text-gray-500'><NavLink to='/'>Home</NavLink></li>
+                        <li className='font-medium text-gray-500'><NavLink to='/apps'>Apps</NavLink></li>
+                        <li className='font-medium text-gray-500'><NavLink to='/installation'>Installation</NavLink></li>
                     </ul>
                 </div>
-                <Link to='/' className="flex items-center gap-2 font-semibold"><img className='w-[40px]' src={logo} alt="logo" /> HERO.IO</Link>
+                <li className="flex items-center gap-2"><img className='w-[40px]' src={logo} alt="logo" /><NavLink to='/' className="font-semibold text-blue-500"> HERO.IO</NavLink></li>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className='font-medium text-gray-500'><Link to='/'>Home</Link></li>
-                    <li className='font-medium text-gray-500'><Link to='/apps'>Apps</Link></li>
-                    <li className='font-medium text-gray-500'><Link to='/installation'>Installation</Link></li>
+                    <li className='font-medium text-gray-500'><NavLink to='/'>Home</NavLink></li>
+                    <li className='font-medium text-gray-500'><NavLink to='/apps'>Apps</NavLink></li>
+                    <li className='font-medium text-gray-500'><NavLink to='/installation'>Installation</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">

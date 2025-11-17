@@ -20,6 +20,13 @@ body {
 .bnts:hover {
   margin-top: -5px;
 }
+.b {
+  transition: margin 0.3s ease;
+}
+
+.b:hover {
+  margin-bottom: 5px;
+}
 
 .cards {
   transition: margin 0.4s ease, box-shadow 0.4s ease;
@@ -28,4 +35,8 @@ body {
 .cards:hover {
   margin-top: -5px;
   box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+  @apply border-b-2 border-blue-500 text-blue-500
 }
