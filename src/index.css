@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mooli&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+body {
+  font-family: "Inter", sans-serif;
+  @apply bg-gray-100
+}
+
+.gradient {
+  background: linear-gradient(90deg, #ff00c8, #00eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bnts {
+  transition: margin 0.3s ease;
+}
+
+.bnts:hover {
+  margin-top: -5px;
+}
+
+.cards {
+  transition: margin 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cards:hover {
+  margin-top: -5px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
