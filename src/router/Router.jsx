@@ -3,6 +3,7 @@ import MainLayout from "../pages/MainLayout";
 import Errors from "../pages/Errors";
 import React, { Suspense } from "react";
 import App from "../pages/App";
+import Loading from "../componetns/Loading";
 
 
 const Home = React.lazy(() => import("../pages/Home"));
@@ -21,7 +22,7 @@ export const Router = createBrowserRouter([
         },
         {
             path: '/apps',
-            element: <Suspense fallback={<h2>loading....</h2>}>
+            element: <Suspense fallback={<Loading />}>
                 <Apps></Apps>
             </Suspense>,
             loader: () => fetch('allApp.json'),
@@ -35,6 +36,8 @@ export const Router = createBrowserRouter([
             Component: App
         }
         ],
-        Component: MainLayout
+        element: <Suspense fallback={<Loading />}>
+            <MainLayout />
+        </Suspense>
     }
 ])
