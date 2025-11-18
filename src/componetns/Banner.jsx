@@ -1,13 +1,15 @@
-import { Link } from "react-router";
+import { Link, useNavigation } from "react-router";
 import google from '../assets/googleStore.png';
 import logo2 from '../assets/hero.png';
-import { Suspense, use } from "react";
+import { use } from "react";
 import AppsShow from "./AppsShow";
 import Loading from "./Loading";
 
 const Banner = ({ dataPromiss }) => {
 
     const appsData = use(dataPromiss)
+
+    const navigation = useNavigation()
 
     return (
         <>
@@ -53,7 +55,9 @@ const Banner = ({ dataPromiss }) => {
                 <p className="text-center text-gray-500 mt-3">Explore All Trending Apps on the Market developed by us</p>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14 mt-15">
                     {
-                        appsData.map(app => <Suspense fallback={<Loading />}><AppsShow key={app.id} app={app} /></Suspense>)
+                        navigation.state === "idle" 
+                        ? appsData.map(app => <AppsShow key={app.id}  app={app} />)
+                        : <Loading />
                     }
 
                 </div>

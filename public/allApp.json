@@ -18,7 +18,7 @@
       { "name": "5 star", "count": 5000 }
     ],
     "downloadCategory": "Productivity",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 14.0
   },
   {
     "image": "app_images/weather_app.png",
@@ -60,7 +60,7 @@
       { "name": "5 star", "count": 47000 }
     ],
     "downloadCategory": "Education",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 9.0
   },
   {
     "image": "app_images/cooking_recipes.png",
@@ -81,7 +81,7 @@
       { "name": "5 star", "count": 6200 }
     ],
     "downloadCategory": "Lifestyle",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15.0
   },
   {
     "image": "app_images/music_streaming.png",
@@ -102,7 +102,7 @@
       { "name": "5 star", "count": 100000 }
     ],
     "downloadCategory": "Entertainment",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 8.0
   },
   {
     "image": "app_images/financial_tracker.png",
@@ -123,7 +123,7 @@
       { "name": "5 star", "count": 17000 }
     ],
     "downloadCategory": "Finance",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 9.0
   },
   {
     "image": "app_images/puzzle_game.png",
@@ -144,7 +144,7 @@
       { "name": "5 star", "count": 70000 }
     ],
     "downloadCategory": "Gaming",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 14.0
   },
   {
     "image": "app_images/meditation_app.png",
@@ -165,7 +165,7 @@
       { "name": "5 star", "count": 31200 }
     ],
     "downloadCategory": "Health & Fitness",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15.0
   },
   {
     "image": "app_images/travel_guide.png",
@@ -186,7 +186,7 @@
       { "name": "5 star", "count": 4000 }
     ],
     "downloadCategory": "Travel",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 41.0
   },
   {
     "image": "app_images/drawing_app.png",
@@ -207,7 +207,7 @@
       { "name": "5 star", "count": 16000 }
     ],
     "downloadCategory": "Design",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 11.0
   },
   {
     "image": "app_images/news_aggregator.png",
@@ -249,7 +249,7 @@
       { "name": "5 star", "count": 1500 }
     ],
     "downloadCategory": "Utility",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 14.0
   },
   {
     "image": "app_images/video_editor.png",
@@ -270,7 +270,7 @@
       { "name": "5 star", "count": 32500 }
     ],
     "downloadCategory": "Creativity",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 17.0
   },
   {
     "image": "app_images/dating_app.png",
@@ -291,7 +291,7 @@
       { "name": "5 star", "count": 20000 }
     ],
     "downloadCategory": "Social",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 19.0
   },
   {
     "image": "app_images/ar_game.png",
@@ -312,7 +312,7 @@
       { "name": "5 star", "count": 7500 }
     ],
     "downloadCategory": "Gaming",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 17.0
   },
   {
     "image": "app_images/calculator.png",
@@ -333,7 +333,7 @@
       { "name": "5 star", "count": 5000 }
     ],
     "downloadCategory": "Utility",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 13.0
   },
   {
     "image": "app_images/book_reader.png",
@@ -354,7 +354,7 @@
       { "name": "5 star", "count": 45000 }
     ],
     "downloadCategory": "Books & Reference",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15.0
   },
   {
     "image": "app_images/parental_control.png",
@@ -375,7 +375,7 @@
       { "name": "5 star", "count": 2600 }
     ],
     "downloadCategory": "Tools",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 11.0
   },
   {
     "image": "app_images/photo_gallery.png",
@@ -396,7 +396,7 @@
       { "name": "5 star", "count": 10000 }
     ],
     "downloadCategory": "Privacy",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 12.0
   },
   {
     "image": "app_images/rpg_game.png",
@@ -438,7 +438,7 @@
       { "name": "5 star", "count": 7200 }
     ],
     "downloadCategory": "Entertainment",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 1.0
   },
   {
     "image": "app_images/home_security.png",
@@ -459,7 +459,7 @@
       { "name": "5 star", "count": 4100 }
     ],
     "downloadCategory": "Smart Home",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 3.0
   },
   {
     "image": "app_images/browser.png",
@@ -480,7 +480,7 @@
       { "name": "5 star", "count": 29500 }
     ],
     "downloadCategory": "Communication",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 8.0
   },
   {
     "image": "app_images/car_racing_game.png",
@@ -501,7 +501,7 @@
       { "name": "5 star", "count": 100000 }
     ],
     "downloadCategory": "Gaming",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 8.0
   },
   {
     "image": "app_images/crypto_wallet.png",
@@ -543,7 +543,7 @@
       { "name": "5 star", "count": 4350 }
     ],
     "downloadCategory": "Lifestyle",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 51.0
   },
   {
     "image": "app_images/file_manager.png",
@@ -564,7 +564,7 @@
       { "name": "5 star", "count": 20000 }
     ],
     "downloadCategory": "Tools",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 4.0
   },
   {
     "image": "app_images/streaming_service.png",
@@ -585,7 +585,7 @@
       { "name": "5 star", "count": 53000 }
     ],
     "downloadCategory": "Entertainment",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 6.0
   },
   {
     "image": "app_images/education_flashcards.png",
@@ -606,7 +606,7 @@
       { "name": "5 star", "count": 4000 }
     ],
     "downloadCategory": "Education",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 9
   },
   {
     "image": "app_images/social_media.png",
@@ -627,7 +627,7 @@
       { "name": "5 star", "count": 200000 }
     ],
     "downloadCategory": "Social",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 7
   },
   {
     "image": "app_images/note_taking.png",
@@ -648,7 +648,7 @@
       { "name": "5 star", "count": 14200 }
     ],
     "downloadCategory": "Productivity",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 8
   },
   {
     "image": "app_images/dictionary.png",
@@ -669,7 +669,7 @@
       { "name": "5 star", "count": 11700 }
     ],
     "downloadCategory": "Books & Reference",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15
   },
   {
     "image": "app_images/sports_tracker.png",
@@ -690,7 +690,7 @@
       { "name": "5 star", "count": 21000 }
     ],
     "downloadCategory": "Sports",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 25
   },
   {
     "image": "app_images/stock_trading.png",
@@ -711,7 +711,7 @@
       { "name": "5 star", "count": 22650 }
     ],
     "downloadCategory": "Finance",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15
   },
   {
     "image": "app_images/coloring_book.png",
@@ -732,7 +732,7 @@
       { "name": "5 star", "count": 42000 }
     ],
     "downloadCategory": "Entertainment",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15
   },
   {
     "image": "app_images/pdf_editor.png",
@@ -753,7 +753,7 @@
       { "name": "5 star", "count": 5200 }
     ],
     "downloadCategory": "Productivity",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 13.0
   },
   {
     "image": "app_images/space_shooter.png",
@@ -774,7 +774,7 @@
       { "name": "5 star", "count": 20000 }
     ],
     "downloadCategory": "Gaming",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 5
   },
   {
     "image": "app_images/home_design.png",
@@ -795,7 +795,7 @@
       { "name": "5 star", "count": 8700 }
     ],
     "downloadCategory": "Lifestyle",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 18
   },
   {
     "image": "app_images/vpn_service.png",
@@ -816,7 +816,7 @@
       { "name": "5 star", "count": 32000 }
     ],
     "downloadCategory": "Tools",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 8
   },
   {
     "image": "app_images/real_estate.png",
@@ -837,7 +837,7 @@
       { "name": "5 star", "count": 7700 }
     ],
     "downloadCategory": "Lifestyle",
-    "downloadsInMillions": 5.0
+    "downloadsInMillions": 15
   },
   {
     "image": "app_images/photo_editor_pro.png",
@@ -858,7 +858,7 @@
       { "name": "5 star", "count": 20000 }
     ],
     "downloadCategory": "Highly Popular",
-    "downloadsInMillions": 3.1
+    "downloadsInMillions": 8
   },
   {
     "image": "app_images/fit_track_pro.png",
@@ -927,7 +927,7 @@
     "image": "app_images/gamehub_x.png",
     "title": "GameHub X",
     "companyName": "PixelPlay Inc",
-    "id": 505,
+    "id": 600,
     "appName": "Nexus Arcade",
     "description": "A collection of classic and indie games with monthly updates.",
     "size": 210,

@@ -21,8 +21,7 @@ const addToStoredDB = (id) => {
         Swal.fire({
             icon: "error",
             title: "Oops...",
-            text: "This App Alredy Installed!",
-            // footer: '<a class="text-blue-600" href="#">Why do I have this issue?</a>'
+             text: "This App Alredy Installed!",
         });
     } else {
         let timerInterval;
@@ -44,7 +43,7 @@ const addToStoredDB = (id) => {
         }).then((result) => {
             /* Read more about handling dismissals below */
             if (result.dismiss === Swal.DismissReason.timer) {
-                console.log("I was closed by the timer");
+                // console.log("I was closed by the timer");
             }
         });
         storedBookData.push(id)

@@ -1,18 +1,17 @@
-import { Link, useLoaderData } from "react-router";
+import { useLoaderData, useNavigation } from "react-router";
 import AppsShow from "../componetns/AppsShow";
 import { IoSearchOutline } from "react-icons/io5";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import Loading from "../componetns/Loading";
-import { useNavigation } from "react-router";
+// import { useNavigation } from "react-router";
 
 const Apps = () => {
 
     const appsData = useLoaderData()
-
+ 
     const [apps, setApps] = useState(appsData)
 
-    const navigation = useNavigation()
-    console.log(navigation)
+     const navigation = useNavigation()
 
     // search input handle
     const searchHandle = (e) => {
@@ -43,13 +42,16 @@ const Apps = () => {
 
             <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14 mt-6">
                 {
-                    apps.length === 0
+                    navigation.state === "idle" 
+                    ? apps.length === 0
                         ? <div className="col-span-4">
                             <h2 className="mt-14 text-4xl font-bold text-gray-600 text-center">No Apps Founds!</h2>
                             <a href='/apps' className="btn ml-[43%] mt-5 text-white font-medium bg-linear-to-l to-[#632EE3] from-[#9F62F2]">Show All Apps</a>
                         </div>
-                        : apps.map(app => <Suspense fallback={<Loading />}>
-                            <AppsShow key={app.id} app={app} /></Suspense>)
+                        : apps.map(app => 
+                            <AppsShow key={app.id} app={app} />)
+                            : <Loading />
+                    
                 }
             </div>
         </>

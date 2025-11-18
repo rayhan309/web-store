@@ -1,6 +1,8 @@
-import { FaGithub } from 'react-icons/fa';
+import { FaAppStore, FaGithub } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router';
 import logo from '../assets/logo.png';
+import { AiTwotoneHome } from 'react-icons/ai';
+import { MdOutlineInstallDesktop } from 'react-icons/md';
 
 const Navber = () => {
 
@@ -23,9 +25,9 @@ const Navber = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li className='font-medium text-gray-500'><NavLink to='/'>Home</NavLink></li>
-                    <li className='font-medium text-gray-500'><NavLink to='/apps'>Apps</NavLink></li>
-                    <li className='font-medium text-gray-500'><NavLink to='/installation'>Installation</NavLink></li>
+                    <li className='font-medium text-gray-500'><NavLink to='/'><AiTwotoneHome /> Home</NavLink></li>
+                    <li className='font-medium text-gray-500'><NavLink to='/apps'><FaAppStore /> Apps</NavLink></li>
+                    <li className='font-medium text-gray-500'><NavLink to='/installation'><MdOutlineInstallDesktop /> Installation</NavLink></li>
                 </ul>
             </div>
             <div className="navbar-end">
