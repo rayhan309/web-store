@@ -11,7 +11,7 @@ const AppsShow = ({ app }) => {
 
     // installation Handle
     const installationHandle = (app) => {
-        navigate(`/apps/${app.id}`, {state: {app}})
+        navigate(`/apps-ditailes/${app.id}`, {state: {app}})
     }
 
     return (

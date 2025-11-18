@@ -31,7 +31,7 @@ export const Router = createBrowserRouter([
             Component: Installation
         },
         {
-            path: '/apps/:id',
+            path: '/apps-ditailes/:id',
             Component: App
         }
         ],

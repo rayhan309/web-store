@@ -17,8 +17,8 @@ const Banner = ({ dataPromiss }) => {
                 {/* link btn */}
                 <div className="flex justify-center mt-10">
                     <div className="flex items-center gap-10 mx-auto">
-                        <Link className="btn shadow-xl bnts"><img className="w-6" src={google} alt="" />Google Play</Link>
-                        <Link className="btn shadow-xl bnts"><img className="w-5" src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="" />App Store</Link>
+                        <Link to="https://play.google.com/store/games?hl=en" className="btn shadow-xl bnts"><img className="w-6" src={google} alt="" />Google Play</Link>
+                        <Link to="https://www.apple.com/app-store/" className="btn shadow-xl bnts"><img className="w-5" src="https://upload.wikimedia.org/wikipedia/commons/6/67/App_Store_%28iOS%29.svg" alt="" />App Store</Link>
                     </div>
                 </div>
 
