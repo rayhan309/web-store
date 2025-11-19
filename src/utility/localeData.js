@@ -26,6 +26,7 @@ const addToStoredDB = (id) => {
     } else {
         let timerInterval;
         Swal.fire({
+            color: 'blue',
             title: "Installing......",
             html: "Installing <b></b> ......",
             timer: 2000,

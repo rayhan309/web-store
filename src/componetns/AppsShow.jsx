@@ -1,24 +1,24 @@
 import { FaDownload } from 'react-icons/fa';
 import appLogo from '../assets/demo-app (1).webp';
 import ster from '../assets/icon-ratings.png';
-import { useNavigate, useNavigation } from 'react-router';
+import { useNavigate } from 'react-router';
 
 
 const AppsShow = ({ app }) => {
 
-    const navigation = useNavigation()
+    // const navigation = useNavigation()
+    // console.log(navigation.state)
 
     const navigate = useNavigate()
 
-    // installation Handle
-    const installationHandle = (app, n) => {
-        console.log(n.state)
+    // installation page Handle
+    const installationHandle = (app) => {
         navigate(`/apps-ditailes/${app.id}`, { state: { app } })
     }
 
     return (
         <div
-            onClick={() => installationHandle(app, navigation)}
+            onClick={() => installationHandle(app)}
             className='p-4 bg-white shadow rounded-lg cards cursor-pointer'>
             <img className='rounded-lg w-full max-h-[300px]' src={appLogo} alt="apps" />
             <h2 className='text-gray-600 mt-2'>{app.appName}</h2>

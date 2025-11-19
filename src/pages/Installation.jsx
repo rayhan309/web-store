@@ -4,6 +4,8 @@ import { IoIosStar, IoMdArrowDropdown } from 'react-icons/io';
 import img from '../assets/demo-app (4).webp'
 import { HiMiniArrowDownTray } from 'react-icons/hi2';
 import Swal from 'sweetalert2';
+import { CiTrash } from 'react-icons/ci';
+import { MdOutlineInstallDesktop } from 'react-icons/md';
 
 const Installation = () => {
 
@@ -27,21 +29,32 @@ const Installation = () => {
     }, [allApps]);
     const unstallHandle = id => {
 
-        // show alert
+
         Swal.fire({
-            title: "Deleting...",
-            timer: 2000,
-            timerProgressBar: true,
-            didOpen: () => Swal.showLoading()
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+                // remove from state
+                const filteredApps = apps.filter(app => app.id !== id);
+                setApps(filteredApps);
+
+                // update localStorage
+                const filteredIds = filteredApps.map(app => app.id);
+                localStorage.setItem("app", JSON.stringify(filteredIds));
+            }
         });
 
-        // remove from state
-        const filteredApps = apps.filter(app => app.id !== id);
-        setApps(filteredApps);
-
-        // update localStorage
-        const filteredIds = filteredApps.map(app => app.id);
-        localStorage.setItem("app", JSON.stringify(filteredIds));
 
     };
 
@@ -69,11 +82,11 @@ const Installation = () => {
 
     return (
         <div className='mt-28'>
-            <h2 className='text-5xl font-bold text-gray-700 text-center'>Your Installed Apps</h2>
-            <p className='text-gray-500 font-medium mt-3 text-center'>Explore All Trending Apps on the Market developed by us</p>
+            <h2 className='text-5xl font-bold text-gray-700 flex justify-center items-center gap-3'>Your Installed Apps <MdOutlineInstallDesktop /></h2>
+            <p className='text-gray-500 font-medium mt-4 text-center'>Explore All Trending Apps on the Market developed by us</p>
 
             <div className='flex justify-between items-center mt-10'>
-                <h3 className='text-3xl font-semibold '>1 Apps Founds</h3>
+                <h3 className='text-3xl font-semibold '>( {apps.length} ) Apps Installed</h3>
                 <details className="dropdown">
                     <summary className="btn m-1">Sort by {sort ? sort : ''}<IoMdArrowDropdown /></summary>
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-38 p-2 shadow-sm">
@@ -111,7 +124,7 @@ const Installation = () => {
 
                         </div>
 
-                        <button onClick={() => unstallHandle(app.id)} className='btn bg-[#00D390] text-lg font-medium text-white'>Unstall</button>
+                        <button onClick={() => unstallHandle(app.id)} className='btn py-6 px-6 bg-[#00D390] text-xl font-medium text-white'>Unstall <CiTrash /></button>
                     </div>
                 )
             }

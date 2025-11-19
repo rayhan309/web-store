@@ -4,6 +4,7 @@ import logo2 from '../assets/hero.png';
 import { use } from "react";
 import AppsShow from "./AppsShow";
 import Loading from "./Loading";
+import { FaMoneyBillTrendUp } from "react-icons/fa6";
 
 const Banner = ({ dataPromiss }) => {
 
@@ -36,14 +37,14 @@ const Banner = ({ dataPromiss }) => {
                             <p className="mt-3">21% more than last month</p>
                         </div>
                         <div className="text-center">
-                            <p className="mb-3">Total Downloads</p>
-                            <span className="text-5xl md:text-6xl font-extrabold">29.6M</span>
-                            <p className="mt-3">21% more than last month</p>
+                            <p className="mb-3">Total Reviews</p>
+                            <span className="text-5xl md:text-6xl font-extrabold">906K</span>
+                            <p className="mt-3">46% more than last month</p>
                         </div>
                         <div className="text-center">
-                            <p className="mb-3">Total Downloads</p>
-                            <span className="text-5xl md:text-6xl font-extrabold">29.6M</span>
-                            <p className="mt-3">21% more than last month</p>
+                            <p className="mb-3">Active Apps</p>
+                            <span className="text-5xl md:text-6xl font-extrabold">132+</span>
+                            <p className="mt-3">31 more will Launch</p>
                         </div>
                     </div>
                 </div>
@@ -51,8 +52,8 @@ const Banner = ({ dataPromiss }) => {
 
             {/* apps show display */}
             <div className="mt-20">
-                <h1 className="text-5xl font-bold text-center text-gray-800">Trending Apps</h1>
-                <p className="text-center text-gray-500 mt-3">Explore All Trending Apps on the Market developed by us</p>
+                <h1 className="text-5xl font-bold flex justify-center items-center gap-3 text-gray-800">Trending Apps <FaMoneyBillTrendUp /></h1>
+                <p className="text-center text-gray-500 mt-4">Explore All Trending Apps on the Market developed by us</p>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14 mt-15">
                     {
                         navigation.state === "idle" 
