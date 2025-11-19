@@ -6,6 +6,7 @@ import { HiMiniArrowDownTray } from 'react-icons/hi2';
 import Swal from 'sweetalert2';
 import { CiTrash } from 'react-icons/ci';
 import { MdOutlineInstallDesktop } from 'react-icons/md';
+import Loading from '../componetns/Loading'
 
 const Installation = () => {
 
@@ -14,6 +15,7 @@ const Installation = () => {
 
     const [apps, setApps] = useState([])
     const [sort, setSort] = useState("")
+    const [loading, setLoading] = useState(false)
 
     // get locale data
     useEffect(() => {
@@ -27,9 +29,8 @@ const Installation = () => {
 
         // map IDs to full app objects from allApps
     }, [allApps]);
-    const unstallHandle = id => {
 
-
+    const unstallHandle = id => { 
         Swal.fire({
             title: "Are you sure?",
             text: "You won't be able to revert this!",
@@ -42,9 +43,11 @@ const Installation = () => {
             if (result.isConfirmed) {
                 Swal.fire({
                     title: "Deleted!",
-                    text: "Your file has been deleted.",
+                    text: "Your App has been deleted.",
                     icon: "success"
                 });
+
+
                 // remove from state
                 const filteredApps = apps.filter(app => app.id !== id);
                 setApps(filteredApps);
@@ -60,6 +63,7 @@ const Installation = () => {
 
 
     const sortHandle = type => {
+        setLoading(true)
         setSort(type)
         if (type === "high") {
             const high = apps.sort((a, b) => {
@@ -77,16 +81,20 @@ const Installation = () => {
             })
             setApps(high)
         }
+
+        setTimeout(() => {
+            setLoading(false)
+        }, 1500);
     }
     // console.log(sort)
 
     return (
-        <div className='mt-28'>
-            <h2 className='text-5xl font-bold text-gray-700 flex justify-center items-center gap-3'>Your Installed Apps <MdOutlineInstallDesktop /></h2>
-            <p className='text-gray-500 font-medium mt-4 text-center'>Explore All Trending Apps on the Market developed by us</p>
+        <div className='mt-10 md:mt-28'>
+            <h2 className='text-3xl md:text-5xl font-bold text-gray-700 flex justify-center items-center gap-3'>Your Installed Apps <MdOutlineInstallDesktop /></h2>
+            <p className='text-gray-500 font-medium mt-3 md:mt-4 text-center'>Explore All Trending Apps on the Market developed by us</p>
 
             <div className='flex justify-between items-center mt-10'>
-                <h3 className='text-3xl font-semibold '>( {apps.length} ) Apps Installed</h3>
+                <h3 className='text-xl md:text-3xl font-semibold '>( {apps.length} ) Apps Installed</h3>
                 <details className="dropdown">
                     <summary className="btn m-1">Sort by {sort ? sort : ''}<IoMdArrowDropdown /></summary>
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-38 p-2 shadow-sm">
@@ -97,36 +105,38 @@ const Installation = () => {
             </div>
 
             {
-                apps.length > 0 &&
-                apps?.map(app =>
-                    <div key={app.id} className='flex justify-between mt-8 p-2 rounded-lg items-center cards bg-white w-full'>
+                loading ? <Loading />
+                    : (
+                        apps.length > 0 &&
+                        apps?.map(app =>
+                            <div key={app.id} className='flex flex-col md:flex-row justify-between mt-8 p-2 rounded-lg items-center cards bg-white w-full'>
 
-                        <div className='flex items-center gap-10'>
-                            <img className='w-28 rounded-lg' src={img} alt="apps" />
+                                <div className='flex items-center gap-2 md:gap-10'>
+                                    <img className='w-28 rounded-lg' src={img} alt="apps" />
 
-                            <div>
-
-                                <h3 className='text-xl font-medium '>{app.appName}</h3>
-
-                                <div className='flex items-center gap-4 mt-3'>
                                     <div>
-                                        <span className='text-[#00D390] flex items-center gap-1 '><HiMiniArrowDownTray /> {app.downloads}</span>
+
+                                        <h3 className='text-xl font-medium '>{app.appName}</h3>
+
+                                        <div className='flex items-center gap-4 mt-3'>
+                                            <div>
+                                                <span className='text-[#00D390] flex items-center gap-1 '><HiMiniArrowDownTray /> {app.downloads}</span>
+                                            </div>
+                                            <div>
+                                                <span className='text-[#FF8811] flex items-center gap-1 '><IoIosStar /> {app.ratingAvg}</span>
+                                            </div>
+                                            <div>
+                                                <span className='text-gray-500 flex items-center gap-1 '><HiMiniArrowDownTray />{app.size} MB</span>
+                                            </div>
+                                        </div>
+
                                     </div>
-                                    <div>
-                                        <span className='text-[#FF8811] flex items-center gap-1 '><IoIosStar /> {app.ratingAvg}</span>
-                                    </div>
-                                    <div>
-                                        <span className='text-gray-500 flex items-center gap-1 '><HiMiniArrowDownTray />{app.size} MB</span>
-                                    </div>
+
                                 </div>
 
+                                <button onClick={() => unstallHandle(app.id)} className='btn mt-3 md:mt-0 md:py-6 md:px-6 bg-[#00D390] md:text-xl font-medium text-white'>Unstall <CiTrash /></button>
                             </div>
-
-                        </div>
-
-                        <button onClick={() => unstallHandle(app.id)} className='btn py-6 px-6 bg-[#00D390] text-xl font-medium text-white'>Unstall <CiTrash /></button>
-                    </div>
-                )
+                        ))
             }
         </div>
     );

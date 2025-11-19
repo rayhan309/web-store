@@ -30,14 +30,14 @@ const Apps = () => {
 
     return (
         <>
-            <h1 className="mt-14 text-5xl font-semibold text-gray-700 flex gap-3 justify-center items-center">
+            <h1 className="mt-9 md:mt-14 text-4xl md:text-5xl font-semibold text-gray-700 flex md:gap-3 justify-center items-center">
                 Our All Applications <FaAppStore />
             </h1>
-            <p className="text-gray-500 text-center mt-4">
+            <p className="text-gray-500 text-center mt-2 md:mt-4">
                 Explore All Apps on the Market developed by us. We code for Millions
             </p>
 
-            <div className="mt-20 flex justify-between items-center">
+            <div className="md:mt-20 mt-10 flex flex-col md:flex-row justify-between items-center">
                 <p className="text-2xl font-semibold text-gray-700">
                     ({appsData.length}) Apps Found
                 </p>
@@ -45,7 +45,7 @@ const Apps = () => {
                     <IoSearchOutline className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xl" />
                     <input
                         onChange={searchHandle}
-                        className="border border-gray-300 rounded-lg py-2 pl-10 pr-3 w-[250px]"
+                        className="border mt-3 md:mt-0 border-gray-300 rounded-lg py-2 pl-10 pr-3 w-[250px]"
                         type="text"
                         name="name"
                         placeholder="Search App"

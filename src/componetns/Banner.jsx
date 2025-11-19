@@ -14,8 +14,8 @@ const Banner = ({ dataPromiss }) => {
 
     return (
         <>
-            <div className="pt-14 bg-gray-100 mb-14\">
-                <h2 className='text-6xl text-center font-bold'>We Build <br /> <span className='gradient'>Productive</span> Apps</h2>
+            <div className="pt-8 md:pt-14 bg-gray-100 mb-14\">
+                <h2 className='text-3xl md:text-6xl text-center font-bold'>We Build <br /> <span className='gradient'>Productive</span> Apps</h2>
                 <p className="text-gray-500 mt-4 text-center">At HERO.IO, we craft innovative apps designed to make everyday life simpler, smarter, and more exciting. <br /> ?Our goal is to turn your ideas into digital experiences that truly make an impact.</p>
 
                 {/* link btn */}
@@ -33,17 +33,17 @@ const Banner = ({ dataPromiss }) => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8">
                         <div className="text-center">
                             <p className="mb-3">Total Downloads</p>
-                            <span className="text-5xl md:text-6xl font-extrabold">29.6M</span>
+                            <span className="text-4xl md:text-6xl font-extrabold">29.6M</span>
                             <p className="mt-3">21% more than last month</p>
                         </div>
                         <div className="text-center">
                             <p className="mb-3">Total Reviews</p>
-                            <span className="text-5xl md:text-6xl font-extrabold">906K</span>
+                            <span className="text-4xl md:text-6xl font-extrabold">906K</span>
                             <p className="mt-3">46% more than last month</p>
                         </div>
                         <div className="text-center">
                             <p className="mb-3">Active Apps</p>
-                            <span className="text-5xl md:text-6xl font-extrabold">132+</span>
+                            <span className="text-4xl md:text-6xl font-extrabold">132+</span>
                             <p className="mt-3">31 more will Launch</p>
                         </div>
                     </div>
@@ -51,10 +51,10 @@ const Banner = ({ dataPromiss }) => {
             </div>
 
             {/* apps show display */}
-            <div className="mt-20">
-                <h1 className="text-5xl font-bold flex justify-center items-center gap-3 text-gray-800">Trending Apps <FaMoneyBillTrendUp /></h1>
+            <div className="mt-14 md:mt-20">
+                <h1 className="text-4xl md:text-5xl font-bold flex justify-center items-center gap-3 text-gray-800">Trending Apps <FaMoneyBillTrendUp /></h1>
                 <p className="text-center text-gray-500 mt-4">Explore All Trending Apps on the Market developed by us</p>
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-14 mt-15">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7 md:gap-14 mt-5 md:mt-15">
                     {
                         navigation.state === "idle" 
                         ? appsData.map(app => <AppsShow key={app.id}  app={app} />)
